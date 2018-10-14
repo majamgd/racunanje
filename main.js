@@ -24,7 +24,7 @@ function izracunajDane() {
     console.log("Broj dana ucenja do eksperta je:",ukupanBrojDanaDoEksperta);
     console.log("Broj godina ucenja do eksperta je:",ukupanBrojGodinaDoEksperta.toFixed(2));
 
-    ////////////////////////////////////////////////
+    ///////////////
     var celihGodina = Math.floor(ukupanBrojDanaDoEksperta/365);
     var ostatakDanaGodina = ukupanBrojDanaDoEksperta - (celihGodina * 365);
     var brojMeseci = Math.floor(ostatakDanaGodina / 30);
