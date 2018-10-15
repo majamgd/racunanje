@@ -1,5 +1,8 @@
 
 const pasus1 = document.getElementById("poruka");
+const pasus2 = document.getElementById("poruka1");
+
+
 
 // function getBrojSatiDnevno() {
 //     return document.getElementById("unos").value;
@@ -16,8 +19,16 @@ function izracunajDane() {
 
     brojGodinaDoPocetnika=brojDanaZaPocetnika / 365;
     console.log("Broj godina ucenja do pocetnika je:",brojGodinaDoPocetnika.toFixed(2));
+    ////////////////////////////////
+    var celihGodinaDoPocetnika = Math.floor(brojDanaZaPocetnika/365);
+    var ostatakDanaGodinaDoPocetnika = brojDanaZaPocetnika - (celihGodinaDoPocetnika * 365);
+    var brojMeseciZaPocetnika = Math.floor(ostatakDanaGodinaDoPocetnika/ 30);
+    var daniDoPocetnika = ostatakDanaGodinaDoPocetnika - (brojMeseciZaPocetnika * 30);
 
-    //pasus1.innerText="Broj dana ....";
+
+
+
+   pasus2.innerText="Potrebno je: "+ celihGodinaDoPocetnika + "godina, " + brojMeseciZaPocetnika + " meseci i " + daniDoPocetnika + " dana da se dodje do pocetnika.";
 
     daniPrakseDaPocetnikPostaneExpert = (satiEkspert-satiPocetnik)/8;
     ukupanBrojDanaDoEksperta = brojDanaZaPocetnika + daniPrakseDaPocetnikPostaneExpert;
@@ -34,7 +45,7 @@ function izracunajDane() {
     // var message = 'Potrebno je ' + celihGodina + ' godina, ' + brojMeseci + ' meseci i' ;
     // pasus1.innerText = message;
 
-    pasus1.innerText = `Potrebno je ${celihGodina} godina, ${brojMeseci} meseci i ${dani} dana da se dodje do eksperta`; // template string (ES6)
+    pasus1.innerText = `Potrebno je: ${celihGodina} godina, ${brojMeseci} meseci i ${dani} dana da se dodje do eksperta.`; // template string (ES6)
 }
 
 const dugme = document.getElementById("klikni");
