@@ -1,15 +1,15 @@
 
-const pasus1= document.getElementById("pera");
+const pasus1 = document.getElementById("poruka");
 
 // function getBrojSatiDnevno() {
 //     return document.getElementById("unos").value;
 // }
 
 function izracunajDane() {
-    satiEkspert=10000;
-    satiPocetnik=2000;
+    satiEkspert = 10000;
+    satiPocetnik = 2000;
     // brojSatiDnevno=getBrojSatiDnevno();
-    brojSatiDnevno=document.getElementById("unos").value;
+    brojSatiDnevno = document.getElementById("unos").value;
 
     brojDanaZaPocetnika = satiPocetnik / brojSatiDnevno;
     console.log("Broj dana ucenja do pocetnika je:",brojDanaZaPocetnika);
@@ -19,9 +19,9 @@ function izracunajDane() {
 
     //pasus1.innerText="Broj dana ....";
 
-    daniPrakseDaPocetnikPostaneExpert=(satiEkspert-satiPocetnik)/8;
+    daniPrakseDaPocetnikPostaneExpert = (satiEkspert-satiPocetnik)/8;
     ukupanBrojDanaDoEksperta = brojDanaZaPocetnika + daniPrakseDaPocetnikPostaneExpert;
-    ukupanBrojGodinaDoEksperta=ukupanBrojDanaDoEksperta / 365;
+    ukupanBrojGodinaDoEksperta = ukupanBrojDanaDoEksperta / 365;
     console.log("Broj dana ucenja do eksperta je:",ukupanBrojDanaDoEksperta);
     console.log("Broj godina ucenja do eksperta je:",ukupanBrojGodinaDoEksperta.toFixed(2));
 
