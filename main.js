@@ -1,14 +1,15 @@
 
 const pasus1= document.getElementById("pera");
 
-function getBrojSatiDnevno() {
-    return document.getElementById("unos").value;
-}
+// function getBrojSatiDnevno() {
+//     return document.getElementById("unos").value;
+// }
 
 function izracunajDane() {
     satiEkspert=10000;
     satiPocetnik=2000;
-    brojSatiDnevno=getBrojSatiDnevno();
+    // brojSatiDnevno=getBrojSatiDnevno();
+    brojSatiDnevno=document.getElementById("unos").value;
 
     brojDanaZaPocetnika = satiPocetnik / brojSatiDnevno;
     console.log("Broj dana ucenja do pocetnika je:",brojDanaZaPocetnika);
@@ -16,7 +17,7 @@ function izracunajDane() {
     brojGodinaDoPocetnika=brojDanaZaPocetnika / 365;
     console.log("Broj godina ucenja do pocetnika je:",brojGodinaDoPocetnika.toFixed(2));
 
-    pasus1.innerText="Broj dana ....";
+    //pasus1.innerText="Broj dana ....";
 
     daniPrakseDaPocetnikPostaneExpert=(satiEkspert-satiPocetnik)/8;
     ukupanBrojDanaDoEksperta = brojDanaZaPocetnika + daniPrakseDaPocetnikPostaneExpert;
@@ -29,12 +30,19 @@ function izracunajDane() {
     var ostatakDanaGodina = ukupanBrojDanaDoEksperta - (celihGodina * 365);
     var brojMeseci = Math.floor(ostatakDanaGodina / 30);
     var dani = ostatakDanaGodina - (brojMeseci * 30);
-    var message = `Potrebno je ${celihGodina} godina, ${brojMeseci} meseci i ${dani} dana da se dodje do eksperta`; // Template string
-    // var message = 'Potrebno je ' + celihGodina + ' godina, ' + brojMeseci + '' ;
-    console.log(message);
+    // var message = `Potrebno je ${celihGodina} godina, ${brojMeseci} meseci i ${dani} dana da se dodje do eksperta`; // Template string
+    // var message = 'Potrebno je ' + celihGodina + ' godina, ' + brojMeseci + ' meseci i' ;
+    // pasus1.innerText = message;
+
+    pasus1.innerText = `Potrebno je ${celihGodina} godina, ${brojMeseci} meseci i ${dani} dana da se dodje do eksperta`; // template string (ES6)
 }
 
 const dugme = document.getElementById("klikni");
-console.log(dugme);
 //dugme.onclick = izracunajDane
 dugme.addEventListener("click", izracunajDane);
+
+
+
+
+
+
