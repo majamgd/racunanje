@@ -4,15 +4,15 @@ const pasus2 = document.getElementById("poruka1");
 
 
 
-// function getBrojSatiDnevno() {
-//     return document.getElementById("unos").value;
-// }
+function preuzimanjeBrojaSatiDnevno() {
+   return document.getElementById("unos").value;
+ }
 
 function izracunajDane() {
     satiEkspert = 10000;
     satiPocetnik = 2000;
-    // brojSatiDnevno=getBrojSatiDnevno();
-    brojSatiDnevno = document.getElementById("unos").value;
+    brojSatiDnevno=preuzimanjeBrojaSatiDnevno();
+    //brojSatiDnevno = document.getElementById("unos").value;
 
     brojDanaZaPocetnika = satiPocetnik / brojSatiDnevno;
     console.log("Broj dana ucenja do pocetnika je:",brojDanaZaPocetnika);
