@@ -8,6 +8,10 @@ function preuzimanjeBrojaSatiDnevno() {
    return document.getElementById("unos").value;
  }
 
+function ispisiPorukuUPasus(pasus,poruka) {
+    pasus.innerText = poruka;
+}
+
 function izracunajDane() {
     satiEkspert = 10000;
     satiPocetnik = 2000;
@@ -27,8 +31,9 @@ function izracunajDane() {
 
 
 
-
-   pasus2.innerText="Potrebno je: "+ celihGodinaDoPocetnika + "godina, " + brojMeseciZaPocetnika + " meseci i " + daniDoPocetnika + " dana da se dodje do pocetnika.";
+    // TODO
+   // pasus2.innerText="Potrebno je: "+ celihGodinaDoPocetnika + "godina, " + brojMeseciZaPocetnika + " meseci i " + daniDoPocetnika + " dana da se dodje do pocetnika.";
+   ispisiPorukuUPasus(pasus2,"Potrebno je: "+ celihGodinaDoPocetnika + "godina, " + brojMeseciZaPocetnika + " meseci i " + daniDoPocetnika + " dana da se dodje do pocetnika.");
 
     daniPrakseDaPocetnikPostaneExpert = (satiEkspert-satiPocetnik)/8;
     ukupanBrojDanaDoEksperta = brojDanaZaPocetnika + daniPrakseDaPocetnikPostaneExpert;
@@ -45,7 +50,10 @@ function izracunajDane() {
     // var message = 'Potrebno je ' + celihGodina + ' godina, ' + brojMeseci + ' meseci i' ;
     // pasus1.innerText = message;
 
-    pasus1.innerText = `Potrebno je: ${celihGodina} godina, ${brojMeseci} meseci i ${dani} dana da se dodje do eksperta.`; // template string (ES6)
+    
+     // TODO
+    // pasus1.innerText = `Potrebno je: ${celihGodina} godina, ${brojMeseci} meseci i ${dani} dana da se dodje do eksperta.`; // template string (ES6)
+    ispisiPorukuUPasus(pasus1,`Potrebno je: ${celihGodina} godina, ${brojMeseci} meseci i ${dani} dana da se dodje do eksperta.`);
 }
 
 const dugme = document.getElementById("klikni");
