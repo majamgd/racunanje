@@ -1,6 +1,6 @@
 
-const pasus1 = document.getElementById("poruka");
-const pasus2 = document.getElementById("poruka1");
+const porukaEkspert = document.getElementById("porukaEkspert");
+const porukaPocetnik = document.getElementById("porukaPocetnik");
 
 
 
@@ -32,8 +32,8 @@ function izracunajDane() {
 
 
     // TODO
-   // pasus2.innerText="Potrebno je: "+ celihGodinaDoPocetnika + "godina, " + brojMeseciZaPocetnika + " meseci i " + daniDoPocetnika + " dana da se dodje do pocetnika.";
-   ispisiPorukuUPasus(pasus2,"Potrebno je: "+ celihGodinaDoPocetnika + "godina, " + brojMeseciZaPocetnika + " meseci i " + daniDoPocetnika + " dana da se dodje do pocetnika.");
+   // porukaPocetnik.innerText="Potrebno je: "+ celihGodinaDoPocetnika + "godina, " + brojMeseciZaPocetnika + " meseci i " + daniDoPocetnika + " dana da se dodje do pocetnika.";
+   ispisiPorukuUPasus(porukaPocetnik,"Potrebno je: "+ celihGodinaDoPocetnika + "godina, " + brojMeseciZaPocetnika + " meseci i " + daniDoPocetnika + " dana da se dodje do pocetnika.");
 
     daniPrakseDaPocetnikPostaneExpert = (satiEkspert-satiPocetnik)/8;
     ukupanBrojDanaDoEksperta = brojDanaZaPocetnika + daniPrakseDaPocetnikPostaneExpert;
@@ -48,12 +48,12 @@ function izracunajDane() {
     var dani = ostatakDanaGodina - (brojMeseci * 30);
     // var message = `Potrebno je ${celihGodina} godina, ${brojMeseci} meseci i ${dani} dana da se dodje do eksperta`; // Template string
     // var message = 'Potrebno je ' + celihGodina + ' godina, ' + brojMeseci + ' meseci i' ;
-    // pasus1.innerText = message;
+    // porukaEkspert.innerText = message;
 
     
      // TODO
-    // pasus1.innerText = `Potrebno je: ${celihGodina} godina, ${brojMeseci} meseci i ${dani} dana da se dodje do eksperta.`; // template string (ES6)
-    ispisiPorukuUPasus(pasus1,`Potrebno je: ${celihGodina} godina, ${brojMeseci} meseci i ${dani} dana da se dodje do eksperta.`);
+    // porukaEkspert.innerText = `Potrebno je: ${celihGodina} godina, ${brojMeseci} meseci i ${dani} dana da se dodje do eksperta.`; // template string (ES6)
+    ispisiPorukuUPasus(porukaEkspert,`Potrebno je: ${celihGodina} godina, ${brojMeseci} meseci i ${dani} dana da se dodje do eksperta.`);
 }
 
 const dugme = document.getElementById("klikni");
